@@ -2,7 +2,7 @@ import {React, useState, useEffect} from "react";
 import Article from "./article"
 import {buildUrl} from "../utilities"
 
-function ArticleList(){
+export default function ArticleList(){
     const [articlesList, setArticlesList] = useState([]);
 
     useEffect(() =>  {
@@ -26,5 +26,3 @@ function ArticleList(){
         </div>
     );
 }
-
-export default ArticleList;
