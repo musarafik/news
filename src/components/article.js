@@ -7,9 +7,10 @@ import React from "react";
 import Box from "@mui/material/Box";
 
 export default function Article(props){
+    const handleOnClick = (url) => window.location.href = props.url;
+
     return(
         <Box sx={{ maxWidth: "50%" }}>
-    
         <Card variant="outlined">
           <CardContent>
             <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
@@ -28,10 +29,8 @@ export default function Article(props){
             </Typography>
           </CardContent>
           <CardActions>
-            <Button size="small">Learn More</Button>
+          <Button size="small" onClick={() => handleOnClick(props.url)}>Learn More</Button>
           </CardActions>
-            {/* <p>{props.description}</p>
-            <p>{props.url}</p> */}
         </Card>
         </Box>
     );
