@@ -15,8 +15,9 @@ export default function ArticleDescription(props){
                 {props.description}
             </Typography>
             </CardContent>
-            <CardActions>
-                <Button size="small" onClick={() => onLinkClick(props.url)}>Learn More</Button>
+            <CardActions className="articleButtonsContainer">
+                <Button size="small" onClick={() => onLinkClick(props.url)}>View Full Article</Button>
+                <Button size="small" onClick={() => props.setShowDescription(!props.showDescription)}>View Quick Info</Button>
             </CardActions>
         </Card>
     );

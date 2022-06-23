@@ -20,14 +20,10 @@ export default function ArticleQuickInfo(props){
                 <Typography sx={{ mb: 1.5 }} color="text.secondary">
                     {props.author}
                 </Typography>
-                <Typography variant="body2">
-                    well meaning and kindly.
-                    <br />
-                    {'"a benevolent smile"'}
-                </Typography>
             </CardContent>
-            <CardActions>
-                <Button size="small" onClick={() => onLinkClick(props.url)}>Learn More</Button>
+            <CardActions className="articleButtonsContainer">
+                <Button size="small" onClick={() => onLinkClick(props.url)}>View Full Article</Button>
+                <Button size="small" onClick={() => props.setShowDescription(!props.setShowDescription)}>View Summary</Button>
             </CardActions>
         </Card>
     );

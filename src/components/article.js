@@ -2,16 +2,15 @@ import React, {useState} from "react";
 import Box from "@mui/material/Box";
 import ArticleDescription from "./article_description";
 import ArticleQuickInfo from "./article_quick_info";
+import "./article.css";
 
 export default function Article(props){
   const [showDescription, setShowDescription] = useState(false);
 
-  const onBoxClick = () => {
-    setShowDescription(!showDescription);
-  }
-
   return(
-    <Box sx={{ maxWidth: "30%", marginTop: "50px" }} onClick={onBoxClick}>
+    <Box 
+      className="box"
+    >
       {
         showDescription 
         ? <ArticleDescription 
@@ -19,14 +18,18 @@ export default function Article(props){
             title={props.title} 
             description={props.description} 
             author={props.author}
-            source={props.source} 
+            source={props.source}
+            setShowDescription={setShowDescription} 
+            showDescription={showDescription}
           /> 
         : <ArticleQuickInfo
             url={props.url} 
             title={props.title} 
             description={props.description} 
             author={props.author}
-            source={props.source}  
+            source={props.source}
+            setShowDescription={setShowDescription}  
+            showDescription={showDescription}
           />
       }
     </Box>
