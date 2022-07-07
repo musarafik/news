@@ -23,7 +23,7 @@ export default function ArticleQuickInfo(props){
             </CardContent>
             <CardActions className="articleButtonsContainer">
                 <Button size="small" onClick={() => onLinkClick(props.url)}>View Full Article</Button>
-                <Button size="small" onClick={() => props.setShowDescription(!props.setShowDescription)}>View Summary</Button>
+                <Button size="small" onClick={() => props.setShowDescription(true)}>View Summary</Button>
             </CardActions>
         </Card>
     );
